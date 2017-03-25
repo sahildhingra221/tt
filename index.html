@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Tech Tutes</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" href="images/favicon.png">
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="grid">
+          <h1>&#43;MyMediko&#43;</h1>
+        </div>
+        <div class="grid">
+          <ul>
+            <li><a href="#" class="header-links">How We Work</a></li>
+            <li><a href="#" class="header-links">Category Doctor's</a>
+            <li><a href="./specialists/" class="header-links">Specialists</a></li>
+            <li><a href="./jobs/" class="header-links">Jobs</a></li>
+            <li class="login-menu"><a href="#" class="btn">Log In</a>
+              <ul class="login-opener">
+                <li><a href="">As A Patient</a></li>
+                <li><a href="#">As A Doctor</a></li>
+              </ul>
+            </li>
+            <li><a href="#" class="btn">Sign Up</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <header class="header-front-face">
+      <div class="grid">
+        <h1>&#43;MyMediko&#43;</h1>
+      </div>
+      <div class="account">
+        <li class="login-menu"><a href="#" class=""><img src="images/account.png" class="acc-icon"></a>
+          <ul class="login-opener">
+            <li><a href="#">As A Patient</a></li>
+            <li><a href="#">As A Doctor</a></li>
+          </ul>
+        </li>
+      </div>
+      <div id="barsWrapper">
+        <div id="barsContainer">
+          <div id="bc-first" class="animate"></div>
+            <div id="bc-second" class="animate"></div>
+          <div id="bc-third" class="animate"></div>
+        </div>
+      </div>
+      <aside id="mainAside" class="animate aside-bar">
+        <ul id="menu-list">
+          <li><a href="#">How We Work</a></li>
+          <li><a href="#">Category Doctor's</a></li>
+          <li><a href="#">Specialists</a></li>
+          <li><a href="#">Jobs</a></li>
+        </ul>
+      </aside>
+    </header>
+    <!--script of aside menu-->
+    <script>
+      var aside = document.getElementById('mainAside');
+      var asideOn = false
+      
+      document.getElementById('barsWrapper').addEventListener('click', function(){
+          if(asideOn){
+            aside.style.right = '-100%';
+            
+            asideOn = false;
+          }else{
+            aside.style.right = '0';
+            
+            asideOn = true;
+          }
+      });
+    </script>
+  <!--end of aside menu script-->
+    
+  <!--script for menu button-->
+    <script>
+      
+      function _(e){
+        return document.getElementById(e);
+      }
+      
+      var FirstBar = _('bc-first');
+      var SecondBar = _('bc-second');
+      var ThirdBar = _('bc-third');
+      var btn = _('barsWrapper');
+      var menuOn = false;
+
+      btn.addEventListener('click',function(){
+        
+        if(menuOn){
+          FirstBar.style.transform = 'rotate(0deg)';
+          FirstBar.style.top = '0px';
+          SecondBar.style.opacity= 1;
+          ThirdBar.style.transform = 'rotate(0deg)';
+          ThirdBar.style.bottom = '0px';
+          
+          menuOn = false;
+        }else{
+          FirstBar.style.transform = 'rotate(45deg)';
+          FirstBar.style.top = '8px';
+          SecondBar.style.opacity= 0;
+          ThirdBar.style.transform = 'rotate(-45deg)';
+          ThirdBar.style.bottom = '8px';
+          
+          menuOn = true;
+        }
+      });
+    </script>
+  <!--end of menu button script-->
+    <section class="hero-section background-img">
+      <h1>WELCOME<hr color="black"><h5>#learn how to code#</h5></h1>
+    </section>
+    <section class="intro">
+      <a href="#"><div class="row row-first">
+        <div class="icons">
+          <img src="images/doctor-icon.png">
+        </div>
+        <h2 class="category-intro">
+          Category Doctor's
+        </h2>
+        <p class="category-intro-para">
+          We are having different kinds of doctors from all over the world and different kinds of qualification they all have. You can choose any doctor of your choice. They all are always willing to help you.
+        </p>
+      </div>
+      </a>
+      <a href="#"><div class="row row-second">
+        <div class="icons">
+          <img src="images/heart-icon.png">
+        </div>
+        <h2 class="category-intro">
+          Specialists
+        </h2>
+        <p class="category-intro-para">
+          We are having the specialists of all particular diseases, who can provide you the best Advice/Medicine. You can ask also prefer Male or Female doctor as per you Problem or Requirement
+        </p>
+      </div>
+        </a>
+    </section>
+    <section class="aboutus">
+      <h3 class="heading">About Us</h3>
+      <p>
+        <span>My Mediko</span> is a novel online Doctor consultation platform where you can get your medical questions answered by leading Doctors. Just Submit your question and rest assured that you will consult a Doctor easily. Once you submit the question, the Doctor from the concerned specialty will reply within hours. You can always ask more questions or add details with follow-up question options and make it an online doctor chat. You may use this service to consult a specialty or for getting medical second opinion. All paid services come with a MEDNET quality assurance and 100% money back guarantee.
+      </p>
+    </section>
+    <section class="customer-reviews">
+      <h3 class="heading">
+        See What Ous Costomer Says
+      </h3>
+      <img src="images/review.png">
+      <div class="reviews">
+        <h4 class="name">
+          25 years old, male from Chennai
+        </h4>
+        <p>
+          I had always been scared about trusting health-related information that is available online. However with Lybrate, I can be sure that the advice I get is from from genuine doctors.
+        </p>
+        <img src="images/review.png">
+        <h4 class="name">
+          32 years old, male from Ambala
+        </h4>
+        <p>
+          I had always been scared about trusting health-related information that is available online. However with Lybrate, I can be sure that the advice I get is from from genuine doctors.
+        </p>
+        <img src="images/review.png">
+        <h4 class="name">
+          20 years old, female from Ahmedabad
+        </h4>
+        <p>
+          Feels like a hospital OPD is in my hands. I posted my query and relevant doctors answered within minutes. I'm glad that I found Lybrate!
+        </p>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="box">
+          <h3>Learn More</h3>
+          <ul>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Medical Advisory Board</a></li>
+            <li><a href="#">Find Doctors</a></li>
+            <li><a href="#">Find Doctors By Speciality</a></li>
+            <li><a href="#">Consultation Fee</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">How It Works</a></li>
+            <li><a href="#">Experts - Second Opinion</a></li>
+            <li><a href="#">Experts - General Health</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">FAQ's</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Policies</h3>
+          <ul>
+            <li><a href="#">Terms & conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">PAyment & Refund Policy</a></li>
+            <li><a href="#">Informed Consent</a></li>
+            <li><a href="#">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+      <p>
+        &copy; 2017 MyMediko. All Rights Reserved
+      </p>
+    </footer>
+  </body>
+</html>
